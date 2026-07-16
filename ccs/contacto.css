@@ -1,0 +1,970 @@
+/*=========================================
+            RESET GENERAL
+==========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/*=========================================
+                BODY
+==========================================*/
+
+body{
+
+    background-image:
+    linear-gradient(rgba(4, 61, 92, 0.75),rgba(32, 182, 174, 0.75)),
+    url("../img/fondocontac.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    color:#333;
+
+}
+
+/*=========================================
+                MENÚ
+==========================================*/
+
+header{
+
+    width:95%;
+    max-width:1250px;
+
+    margin:25px auto;
+
+}
+
+nav{
+
+    background:#63B5F6;
+
+    border-radius:20px;
+
+    padding:18px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
+}
+
+.menu{
+
+    list-style:none;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:45px;
+
+}
+
+.menu li a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+}
+
+.menu li a:hover{
+
+    color:#EAF8FF;
+
+    transform:translateY(-3px);
+
+}
+
+/*=========================================
+                TITULO
+==========================================*/
+
+.titulo{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:40px auto;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.85);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+.titulo h1{
+
+    color:#0B5FA5;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.titulo p{
+
+    font-size:18px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+/*=========================================
+        CONTENEDOR PRINCIPAL
+==========================================*/
+
+.contenedor-contacto{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:60px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+/*=========================================
+            IMAGEN
+==========================================*/
+
+.imagen-contacto{
+
+    width:500px;
+
+    background:rgb(141, 160, 224);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
+
+    text-align:center;
+
+}
+
+.imagen-contacto:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.imagen-contacto img{
+
+    width:100%;
+
+    height:680px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.imagen-contacto:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.texto-imagen{
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+.texto-imagen h2{
+
+    font-size:32px;
+
+    color:#0B5FA5;
+
+    margin-bottom:15px;
+
+}
+
+.texto-imagen p{
+
+    font-size:18px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+/*=========================================
+            FORMULARIO
+==========================================*/
+
+.formulario{
+
+    width:650px;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,.90),rgba(255,255,255,.90)),
+    url("../img/fondo-formulario.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.20);
+
+}
+
+.formulario h2{
+
+    text-align:center;
+
+    color:#0B5FA5;
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
+}
+
+.formulario p{
+
+    text-align:center;
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.formulario label{
+
+    display:block;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    color:#0B5FA5;
+
+    font-weight:bold;
+
+    font-size:17px;
+
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:2px solid #BEE9FF;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus{
+
+    outline:none;
+
+    border-color:#0B5FA5;
+
+    box-shadow:0 0 10px rgba(11,95,165,.25);
+
+}
+
+textarea{
+
+    resize:none;
+
+}
+
+.formulario button{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#0B5FA5;
+
+    color:white;
+
+    font-size:19px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.formulario button:hover{
+
+    background:#2A7FD1;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.20);
+
+}
+/*=========================================
+        INFORMACIÓN DE CONTACTO
+==========================================*/
+
+.informacion{
+
+    width:92%;
+    max-width:1250px;
+    margin:70px auto;
+    text-align:center;
+
+}
+
+.informacion h2{
+
+    font-size:38px;
+    color:#0B5FA5;
+    margin-bottom:40px;
+
+}
+
+.contenedor-info{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.95);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 25px rgba(0,0,0,.20);
+
+}
+
+.card img{
+
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    color:#0B5FA5;
+    margin-bottom:10px;
+    font-size:24px;
+
+}
+
+.card p{
+
+    color:#555;
+    line-height:1.7;
+    font-size:17px;
+
+}
+
+/*=========================================
+        REDES SOCIALES
+==========================================*/
+
+.redes{
+
+    width:92%;
+    max-width:1200px;
+    margin:70px auto;
+    text-align:center;
+
+}
+
+.redes h2{
+
+    color:#0B5FA5;
+    font-size:36px;
+    margin-bottom:35px;
+
+}
+
+.redes-iconos{
+
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+
+}
+
+.redes-iconos a{
+
+    width:160px;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:25px;
+
+    text-decoration:none;
+
+    color:#0B5FA5;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+    transition:.35s;
+
+}
+
+.redes-iconos a:hover{
+
+    transform:translateY(-8px);
+
+    background:#DFF2FF;
+
+}
+
+.redes-iconos img{
+
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    margin-bottom:12px;
+
+}
+
+.redes-iconos span{
+
+    display:block;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+}
+
+/*=========================================
+                MAPA
+==========================================*/
+
+.mapa{
+
+    width:92%;
+    max-width:1200px;
+    margin:70px auto;
+    text-align:center;
+
+}
+
+.mapa h2{
+
+    color:#0B5FA5;
+    font-size:36px;
+    margin-bottom:30px;
+
+}
+
+.mapa-contenedor{
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+.mapa-contenedor img{
+
+    width:100%;
+
+    height:450px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.mapa-contenedor:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/*=========================================
+                FOOTER
+==========================================*/
+
+footer{
+
+    margin-top:80px;
+
+    background:#0B5FA5;
+
+    color:white;
+
+    padding:50px 30px 25px;
+
+}
+
+.footer-contenedor{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+}
+
+.footer-logo h2,
+.footer-contacto h3,
+.footer-horario h3{
+
+    margin-bottom:18px;
+
+}
+
+.footer-logo p,
+.footer-contacto p,
+.footer-horario p{
+
+    line-height:1.8;
+
+}
+
+footer hr{
+
+    margin:35px 0;
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.30);
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    font-size:16px;
+
+}
+
+/*=========================================
+            ANIMACIONES
+==========================================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.titulo,
+.imagen-contacto,
+.formulario,
+.card,
+.redes-iconos a,
+.mapa-contenedor{
+
+    animation:aparecer .9s ease;
+
+}
+
+/*=========================================
+            RESPONSIVE
+==========================================*/
+
+@media(max-width:1000px){
+
+    .contenedor-contacto{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contenedor-info{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .footer-contenedor{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .menu{
+
+        flex-direction:column;
+
+        gap:18px;
+
+    }
+
+    .contenedor-info{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .redes-iconos{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .imagen-contacto img{
+
+        height:350px;
+
+    }
+
+    .mapa-contenedor img{
+
+        height:280px;
+
+    }
+
+    .formulario{
+
+        padding:30px;
+
+    }
+
+    .titulo h1{
+
+        font-size:32px;
+
+    }
+
+    .formulario h2{
+
+        font-size:30px;
+
+    }
+
+}
+body{
+
+    background-image:
+    linear-gradient(rgba(222,242,255,.78),rgba(222,242,255,.78)),
+    url("../img/fondocontac.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+}
+/*=========================================
+        CONTACTO VARIEDADES R&M
+        ADAPTADO A LA MAQUETA INDEX
+=========================================*/
+
+
+.contacto-contenido{
+
+    display:flex;
+
+    gap:25px;
+
+    align-items:stretch;
+
+    width:100%;
+
+}
+
+
+
+/*=============================
+        FORMULARIO
+=============================*/
+
+
+.formulario-contacto{
+
+    width:50%;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+
+
+.formulario-contacto h2{
+
+    text-align:center;
+
+    color:#0B5FA5;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.formulario-contacto label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:8px;
+
+    color:#0B5FA5;
+
+    font-weight:bold;
+
+}
+
+
+
+.formulario-contacto input,
+.formulario-contacto textarea{
+
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:15px;
+
+    border:2px solid #BEE9FF;
+
+    font-size:16px;
+
+}
+
+
+
+.formulario-contacto textarea{
+
+    resize:none;
+
+}
+
+
+
+
+
+/*=============================
+        PANEL CONTACTO
+=============================*/
+
+
+.contacto-contenido aside{
+
+
+    width:50%;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+    text-align:center;
+
+
+}
+
+
+
+.contacto-contenido aside h2{
+
+
+    color:#0B5FA5;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.contacto-contenido aside p{
+
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#555;
+
+
+}
+
+
+
+
+
+/* BOTON WHATSAPP */
+
+
+.contacto-contenido aside .btn-carrito{
+
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    text-decoration:none;
+
+
+}
+
+
+
+
+
+
+/*=========================================
+        RESPONSIVE CONTACTO
+=========================================*/
+
+
+@media(max-width:900px){
+
+
+.contacto-contenido{
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+.formulario-contacto,
+.contacto-contenido aside{
+
+
+    width:100%;
+
+
+}
+
+
+
+}

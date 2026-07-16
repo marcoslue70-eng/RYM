@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carrito | Variedades R&M</title>
+
+<link rel="stylesheet" href="ccs/style.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+
+<!-- ================= HEADER ================= -->
+
+
+<header>
+
+
+<div class="logo">
+
+<h1>
+Variedades <span>R&M</span>
+</h1>
+
+<p>
+Brilla con tu estilo
+</p>
+
+</div>
+
+
+
+<button class="menu-btn" id="menu-btn">
+
+<i class="fas fa-bars"></i>
+
+</button>
+
+
+
+
+<nav id="menu">
+
+<a href="index.html">
+Inicio
+</a>
+
+
+<a href="tienda.html">
+Tienda
+</a>
+
+
+<a href="galeria.html">
+Galería
+</a>
+
+
+<a href="contacto.html">
+Contacto
+</a>
+
+
+<a href="carrito.html">
+
+<i class="fas fa-shopping-cart"></i>
+
+<span class="contador-carrito">
+0
+</span>
+
+</a>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+<!-- ================= CARRITO ================= -->
+
+
+<section class="carrito">
+
+
+<h2>
+Mi carrito de compras
+</h2>
+
+
+
+<div id="lista-carrito">
+
+</div>
+
+
+
+
+
+<div class="resumen-carrito">
+
+
+<h3>
+Resumen
+</h3>
+
+
+<p>
+Total:
+<strong id="total">
+$0.00
+</strong>
+</p>
+
+
+
+<button id="vaciar"
+class="btn-carrito">
+
+Vaciar carrito
+
+</button>
+
+
+
+<a id="whatsapp"
+class="btn">
+
+Enviar pedido por WhatsApp
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer>
+
+
+<div class="copyright">
+
+
+<p>
+© 2026 Variedades R&M
+</p>
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<script src="js/script.js"></script>
+
+
+
+<script>
+
+
+// ================================
+// MOSTRAR CARRITO
+// ================================
+
+
+
+let productos = 
+JSON.parse(localStorage.getItem("carrito")) || [];
+
+
+
+const lista =
+document.getElementById("lista-carrito");
+
+const total =
+document.getElementById("total");
+
+
+
+
+
+
+function mostrarCarrito(){
+
+
+lista.innerHTML="";
+
+
+let suma = 0;
+
+
+
+productos.forEach((producto,index)=>{
+
+
+
+let precio =
+parseFloat(
+producto.precio.replace("$","")
+);
+
+
+
+suma += precio;
+
+
+
+lista.innerHTML += `
+
+
+<div class="producto-carrito">
+
+
+<img src="${producto.imagen}">
+
+
+
+<div>
+
+
+<h3>
+${producto.nombre}
+</h3>
+
+
+<p>
+${producto.precio}
+</p>
+
+
+
+<button 
+onclick="eliminarProducto(${index})"
+class="btn-carrito">
+
+Eliminar
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+`;
+
+
+
+});
+
+
+
+total.textContent =
+"$" + suma.toFixed(2);
+
+
+
+
+generarWhatsApp();
+
+
+}
+
+
+
+
+
+// ================================
+// ELIMINAR PRODUCTO
+// ================================
+
+
+function eliminarProducto(index){
+
+
+productos.splice(index,1);
+
+
+
+localStorage.setItem(
+
+"carrito",
+
+JSON.stringify(productos)
+
+);
+
+
+
+mostrarCarrito();
+
+
+}
+
+
+
+
+// ================================
+// VACIAR CARRITO
+// ================================
+
+
+document
+.getElementById("vaciar")
+.addEventListener("click",()=>{
+
+
+productos=[];
+
+
+localStorage.removeItem("carrito");
+
+
+mostrarCarrito();
+
+
+
+});
+
+
+
+
+
+
+
+// ================================
+// WHATSAPP
+// ================================
+
+
+
+function generarWhatsApp(){
+
+
+let mensaje =
+"Hola Variedades R&M, deseo realizar este pedido:%0A%0A";
+
+
+
+productos.forEach(producto=>{
+
+
+mensaje +=
+"- "+
+producto.nombre+
+" "+
+producto.precio+
+"%0A";
+
+
+});
+
+
+
+mensaje +=
+"%0ATotal: "+
+total.textContent;
+
+
+
+document
+.getElementById("whatsapp")
+.href =
+"https://wa.me/50364224844?text="
++
+mensaje;
+
+
+
+}
+
+
+
+
+
+
+mostrarCarrito();
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
