@@ -989,3 +989,275 @@ font-size:16px;
 
 
 }
+/*==================================
+        PAGINA NOSOTROS
+==================================*/
+
+/* HISTORIA */
+
+.historia{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    margin:40px 0;
+    flex-wrap:wrap;
+}
+
+.historia-img{
+    flex:1;
+    text-align:center;
+}
+
+.historia-img img{
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.historia-texto{
+    flex:2;
+}
+
+.historia-texto h2{
+    color:#005f99;
+    margin-bottom:15px;
+}
+
+.historia-texto p{
+    text-align:justify;
+    line-height:1.8;
+}
+
+
+/* MISION Y VISION */
+
+.mision-vision{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin:40px 0;
+}
+
+.caja{
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+}
+
+.caja img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+.caja h2{
+    color:#005f99;
+    margin-bottom:15px;
+}
+
+
+/* INTRODUCCION */
+
+.intro-nosotros{
+    background:#ffffff;
+    padding:25px;
+    border-radius:15px;
+    margin:30px 0;
+    text-align:center;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+}
+
+
+/* VALORES */
+
+.valores{
+    margin:40px 0;
+}
+
+.valores h2{
+    text-align:center;
+    color:#005f99;
+    margin-bottom:25px;
+}
+
+.contenedor-valores{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.valor{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.valor img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+
+/* PORQUE */
+
+.porque{
+    margin:40px 0;
+}
+
+.porque h2{
+    text-align:center;
+    color:#005f99;
+    margin-bottom:25px;
+}
+
+.porque-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.item{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+
+/* ESTADISTICAS */
+
+.estadisticas{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin:40px 0;
+}
+
+.dato{
+    background:#0088cc;
+    color:white;
+    text-align:center;
+    padding:25px;
+    border-radius:15px;
+}
+
+.dato h2{
+    font-size:38px;
+}
+
+
+/* TESTIMONIOS */
+
+.testimonios{
+    margin:40px 0;
+}
+
+.testimonios h2{
+    text-align:center;
+    color:#005f99;
+    margin-bottom:25px;
+}
+
+.testimonios-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.testimonio{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+
+/* BOTONES */
+
+.botones{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:50px 0;
+}
+
+.btn{
+    background:#0088cc;
+    color:white;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#005f99;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.historia{
+    flex-direction:column;
+}
+
+.mision-vision{
+    grid-template-columns:1fr;
+}
+
+.contenedor-valores{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.porque-grid{
+    grid-template-columns:1fr;
+}
+
+.estadisticas{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.testimonios-grid{
+    grid-template-columns:1fr;
+}
+
+.botones{
+    flex-direction:column;
+}
+
+.historia-img img,
+.caja img,
+.valor img{
+    width:180px;
+    height:180px;
+}
+
+}
+
+@media(max-width:480px){
+
+.contenedor-valores{
+    grid-template-columns:1fr;
+}
+
+.estadisticas{
+    grid-template-columns:1fr;
+}
+
+}

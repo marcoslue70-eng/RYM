@@ -228,67 +228,65 @@ header{
 }
 
 
-
-
-
 /*=========================================
             HISTORIA
 ==========================================*/
 
-
 .historia{
 
     width:92%;
-
-    max-width:1250px;
-
+    max-width:150px;
     margin:70px auto;
 
     display:flex;
-
     align-items:center;
-
-    gap:45px;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
 
 }
-
-
 
 .historia-img{
 
     flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
 }
 
-
+/* IMAGEN CIRCULAR */
 
 .historia-img img{
 
-    width:100%;
-
-    height:280px;
+    width:320px;
+    height:320px;
 
     object-fit:cover;
 
-    border-radius:25px;
+    border-radius:50%;
+
+    border:8px solid #ffffff;
 
     box-shadow:
-    0 12px 25px rgba(0,0,0,.18);
+    0 15px 35px rgba(0,0,0,.25);
 
-    transition:.4s;
+    transition:all .5s ease;
+
+    animation:flotar 4s ease-in-out infinite;
 
 }
-
-
 
 .historia-img img:hover{
 
-    transform:scale(1.05);
+    transform:scale(1.10) rotate(6deg);
+
+    box-shadow:
+    0 25px 45px rgba(0,0,0,.35);
+
+    border-color:#9C6BFF;
 
 }
-
-
-
 
 .historia-texto{
 
@@ -305,8 +303,6 @@ header{
 
 }
 
-
-
 .historia-texto h2{
 
     color:#6A5ACD;
@@ -316,8 +312,6 @@ header{
     margin-bottom:25px;
 
 }
-
-
 
 .historia-texto p{
 
@@ -330,1125 +324,346 @@ header{
     margin-bottom:18px;
 
 }
+
 /*=========================================
             MISIÓN Y VISIÓN
 ==========================================*/
 
-
 .mision-vision{
 
     width:92%;
+    max-width:120px;
 
-    max-width:1250px;
-
-    margin:70px auto;
+    margin:80px auto;
 
     display:flex;
 
     justify-content:center;
 
-    gap:35px;
+    gap:40px;
+
+    flex-wrap:wrap;
 
 }
-
-
-
 
 .caja{
 
     flex:1;
 
+    min-width:320px;
+
     background:white;
 
     border-radius:30px;
 
-    overflow:hidden;
+    padding:35px;
+
+    text-align:center;
 
     box-shadow:
     0 12px 25px rgba(0,0,0,.15);
 
-    transition:.4s;
-
-    text-align:center;
+    transition:.5s;
 
 }
-
-
-
 
 .caja:hover{
 
     transform:translateY(-10px);
 
     box-shadow:
-    0 18px 35px rgba(0,0,0,.20);
+    0 18px 35px rgba(0,0,0,.25);
 
 }
 
-
-
-
-/* IMÁGENES MISIÓN Y VISIÓN */
+/* IMÁGENES CIRCULARES */
 
 .caja img{
 
-    width:100%;
+    width:220px;
 
-    height:230px;
+    height:220px;
 
     object-fit:cover;
 
-    transition:.5s;
+    border-radius:50%;
+
+    border:7px solid #ffffff;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.25);
+
+    margin:15px auto 25px;
+
+    display:block;
+
+    transition:all .5s ease;
+
+    animation:flotar 3.5s ease-in-out infinite;
 
 }
 
+.caja img:hover{
 
+    transform:scale(1.12) rotate(-5deg);
 
+    border-color:#63B8FF;
 
-.caja:hover img{
-
-    transform:scale(1.05);
+    box-shadow:
+    0 20px 35px rgba(0,0,0,.35);
 
 }
-
-
-
 
 .caja h2{
 
     color:#6A5ACD;
 
-    text-align:center;
-
-    margin:25px 0 15px;
-
     font-size:32px;
-
-}
-
-
-
-
-.caja p{
-
-    padding:0 30px 35px;
-
-    color:#555;
-
-    line-height:1.9;
-
-    font-size:17px;
-
-    text-align:center;
-
-}
-
-
-
-
-
-
-
-/*=========================================
-                VALORES
-==========================================*/
-
-
-.valores{
-
-    width:92%;
-
-    max-width:1250px;
-
-    margin:80px auto;
-
-    text-align:center;
-
-}
-
-
-
-
-.valores h2{
-
-    color:#6A5ACD;
-
-    font-size:42px;
-
-    margin-bottom:45px;
-
-}
-
-
-
-
-
-.contenedor-valores{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
-}
-
-
-
-
-
-.valor{
-
-    background:white;
-
-    border-radius:25px;
-
-    padding:25px;
-
-    box-shadow:
-    0 10px 20px rgba(0,0,0,.15);
-
-    transition:.35s;
-
-}
-
-
-
-
-.valor:hover{
-
-    transform:translateY(-10px);
-
-    background:#F5EEFF;
-
-}
-
-
-
-
-
-/* IMÁGENES DE VALORES */
-
-.valor img{
-
-    width:100%;
-
-    height:160px;
-
-    object-fit:cover;
-
-    border-radius:15px;
-
-    margin-bottom:20px;
-
-    transition:.4s;
-
-}
-
-
-
-
-.valor:hover img{
-
-    transform:scale(1.08);
-
-}
-
-
-
-
-
-.valor h3{
-
-    color:#6A5ACD;
-
-    margin-bottom:12px;
-
-    font-size:25px;
-
-}
-
-
-
-
-.valor p{
-
-    color:#555;
-
-    line-height:1.8;
-
-    font-size:16px;
-
-}
-
-
-
-
-
-
-
-/*=========================================
-        ¿POR QUÉ ELEGIRNOS?
-==========================================*/
-
-
-.porque{
-
-    width:92%;
-
-    max-width:1250px;
-
-    margin:80px auto;
-
-    text-align:center;
-
-}
-
-
-
-
-.porque h2{
-
-    color:#6A5ACD;
-
-    font-size:42px;
-
-    margin-bottom:45px;
-
-}
-
-
-
-
-.porque-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
-
-}
-
-
-
-
-
-.item{
-
-    background:white;
-
-    border-radius:25px;
-
-    padding:35px;
-
-    box-shadow:
-
-    0 10px 20px rgba(0,0,0,.15);
-
-    transition:.35s;
-
-}
-
-
-
-
-.item:hover{
-
-    transform:translateY(-10px);
-
-    background:#EAF7FF;
-
-}
-
-
-
-
-
-.item h3{
-
-    color:#6A5ACD;
-
-    font-size:28px;
 
     margin-bottom:18px;
 
 }
 
-
-
-
-.item p{
+.caja p{
 
     color:#555;
 
-    line-height:1.8;
-
     font-size:17px;
 
+    line-height:1.8;
+
 }
-
-
-
-
-
-
-
 /*=========================================
-                BOTONES
+                VALORES
 ==========================================*/
 
-
-.botones{
+.valores{
 
     width:92%;
-
-    max-width:1200px;
-
+    max-width:1250px;
     margin:80px auto;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:35px;
-
-}
-
-
-
-
-.btn{
-
-    text-decoration:none;
-
-    background:
-
-    linear-gradient(
-    135deg,
-    #7EC8F8,
-    #BDA7F2
-    );
-
-
-    color:white;
-
-    padding:18px 40px;
-
-    border-radius:40px;
-
-    font-size:20px;
-
-    font-weight:bold;
-
-    box-shadow:
-
-    0 8px 18px rgba(0,0,0,.15);
-
-    transition:.35s;
-
-}
-
-
-
-
-.btn:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:
-
-    0 15px 25px rgba(0,0,0,.22);
-
-}
-
-
-
-
-
-/*=========================================
-                FOOTER
-==========================================*/
-
-
-footer{
-
-    margin-top:80px;
-
-    background:
-
-    linear-gradient(
-    135deg,
-    #7EC8F8,
-    #BDA7F2
-    );
-
-    color:white;
-
     text-align:center;
 
-    padding:45px 20px;
+}
 
-    box-shadow:
+.valores h2{
 
-    0 -5px 15px rgba(0,0,0,.15);
+    color:#6A5ACD;
+    font-size:42px;
+    margin-bottom:45px;
 
 }
 
+.contenedor-valores{
 
-
-
-
-footer h3{
-
-    font-size:30px;
-
-    margin-bottom:15px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:30px;
 
 }
 
+.valor{
 
+    background:white;
+    border-radius:25px;
+    padding:30px 20px;
+    text-align:center;
 
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
 
-footer p{
+    transition:.4s;
 
-    margin:8px 0;
+}
 
-    font-size:17px;
+.valor:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 35px rgba(0,0,0,.25);
+
+}
+
+.valor img{
+
+    width:180px;
+    height:180px;
+
+    margin:auto;
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:6px solid #ffffff;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+    transition:.5s;
+
+    animation:flotar 3s ease-in-out infinite;
+
+}
+
+.valor img:hover{
+
+    transform:scale(1.15) rotate(8deg);
+
+    border-color:#FF8AC7;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.35);
+
+}
+
+.valor h3{
+
+    color:#6A5ACD;
+
+    margin:20px 0 10px;
+
+    font-size:24px;
+
+}
+
+.valor p{
+
+    color:#555;
+
+    font-size:16px;
 
     line-height:1.8;
 
 }
+
 /*=========================================
-            ANIMACIONES
+        ANIMACIÓN FLOTANTE
 ==========================================*/
 
+@keyframes flotar{
 
-@keyframes aparecer{
-
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(50px);
-
+    0%{
+        transform:translateY(0px);
     }
 
+    50%{
+        transform:translateY(-10px);
+    }
 
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
+    100%{
+        transform:translateY(0px);
     }
 
 }
 
+/*=========================================
+        AJUSTE GENERAL DE IMÁGENES
+==========================================*/
 
+.historia-img img,
+.caja img,
+.valor img{
 
-
-
-.banner,
-.historia,
-.caja,
-.valor,
-.item,
-.botones,
-footer{
-
-
-    animation:
-
-    aparecer .9s ease;
+    object-fit:cover;
 
 }
-
-
-
-
-
 
 /*=========================================
             TABLET
 ==========================================*/
 
-
 @media(max-width:1000px){
-
-
 
 .historia{
 
-
     flex-direction:column;
 
+    text-align:center;
 
 }
-
-
-
-
-.historia-img,
-.historia-texto{
-
-
-    width:100%;
-
-
-}
-
-
-
-
 
 .mision-vision{
 
-
     flex-direction:column;
 
+}
+
+.historia-img img{
+
+    width:260px;
+    height:260px;
 
 }
 
+.caja img{
 
-
-
-.caja{
-
-
-    width:100%;
-
+    width:200px;
+    height:200px;
 
 }
 
+.valor img{
 
-
-
-
-.contenedor-valores{
-
-
-    grid-template-columns:repeat(2,1fr);
-
+    width:170px;
+    height:170px;
 
 }
 
-
-
-
-
-.porque-grid{
-
-
-    grid-template-columns:1fr;
-
-
 }
-
-
-
-}
-
-
-
-
-
-
-
-
 
 /*=========================================
             CELULAR
 ==========================================*/
 
-
 @media(max-width:768px){
-
-
-
-header{
-
-
-    padding:15px;
-
-
-}
-
-
-
-
-
-.menu{
-
-
-    flex-direction:column;
-
-
-    gap:18px;
-
-
-}
-
-
-
-
-
-.banner{
-
-
-    height:300px;
-
-
-}
-
-
-
-
-
-.banner-texto h1{
-
-
-    font-size:38px;
-
-
-}
-
-
-
-
-
-.banner-texto p{
-
-
-    font-size:17px;
-
-
-}
-
-
-
-
-
-.historia{
-
-
-    width:90%;
-
-
-}
-
-
-
-
 
 .historia-img img{
 
-
+    width:220px;
     height:220px;
 
-
 }
-
-
-
-
-
-.historia-texto{
-
-
-    padding:25px;
-
-
-}
-
-
-
-
-
-.historia-texto h2{
-
-
-    font-size:30px;
-
-
-}
-
-
-
-
-
-.historia-texto p{
-
-
-    font-size:16px;
-
-
-}
-
-
-
-
-
-
 
 .caja img{
 
-
-    height:200px;
-
-
-}
-
-
-
-
-
-.caja h2{
-
-
-    font-size:27px;
-
+    width:180px;
+    height:180px;
 
 }
-
-
-
-
-
-.caja p{
-
-
-    font-size:16px;
-
-
-}
-
-
-
-
-
-
-
-.contenedor-valores{
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-
-
-.valor{
-
-
-    padding:25px;
-
-
-}
-
-
-
-
 
 .valor img{
 
-
-    height:180px;
-
-
-}
-
-
-
-
-
-
-
-.porque h2,
-.valores h2{
-
-
-    font-size:34px;
-
+    width:150px;
+    height:150px;
 
 }
 
-
-
-
-
-.item{
-
-
-    padding:25px;
-
-
 }
-
-
-
-
-
-.botones{
-
-
-    flex-direction:column;
-
-
-    align-items:center;
-
-
-}
-
-
-
-
-
-.btn{
-
-
-    width:280px;
-
-
-    text-align:center;
-
-
-}
-
-
-
-
-
-footer h3{
-
-
-    font-size:24px;
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
 
 /*=========================================
         CELULAR PEQUEÑO
 ==========================================*/
 
-
-@media(max-width:600px){
-
-
-
-.banner-texto h1{
-
-
-    font-size:30px;
-
-
-}
-
-
-
-
-
-.banner-texto p{
-
-
-    font-size:15px;
-
-
-}
-
-
-
-
-
-.caja img{
-
-
-    height:180px;
-
-
-}
-
-
-
-
-
-.valor img{
-
-
-    height:160px;
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-/*=========================================
-    AJUSTE FINAL IMÁGENES NOSOTROS
-    VARIEDADES R&M
-==========================================*/
-
-
-
-/* Historia */
+@media(max-width:480px){
 
 .historia-img img{
 
-
-    width:100%;
-
-
-    height:280px;
-
-
-    object-fit:cover;
-
-
-    border-radius:25px;
-
-
-}
-
-
-
-
-
-
-/* Misión y Visión */
-
-
-.caja img{
-
-
-    width:100%;
-
-
-    height:230px;
-
-
-    object-fit:cover;
-
-
-}
-
-
-
-
-
-
-
-/* Valores */
-
-
-.valor img{
-
-
-    width:100%;
-
-
-    height:160px;
-
-
-    object-fit:cover;
-
-
-    border-radius:15px;
-
-
-}
-
-
-
-
-
-
-
-/* Evita crecimiento exagerado */
-
-
-.caja{
-
-
-    min-height:500px;
-
-
-}
-
-
-
-
-
-.valor{
-
-
-    min-height:330px;
-
-
-}
-
-
-
-
-
-@media(max-width:768px){
-
-
-
-.historia-img img{
-
-
-    height:220px;
-
-
-}
-
-
-
-
-
-.caja img{
-
-
-    height:200px;
-
-
-}
-
-
-
-
-
-.valor img{
-
-
+    width:180px;
     height:180px;
 
+}
+
+.caja img{
+
+    width:160px;
+    height:160px;
 
 }
 
+.valor img{
 
+    width:140px;
+    height:140px;
+
+}
 
 }
